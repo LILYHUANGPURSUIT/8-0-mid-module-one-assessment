@@ -28,8 +28,8 @@ const animals = [
  */
 function getTotalCount(animals) {
   let total = 0;
-  for (i = 0; i < animals.length; i++) {
-    total += animals[i].count;
+  for (let animal of animals) {
+    total += animal.count;
   }
   return total;
 }
@@ -50,7 +50,7 @@ function getTotalCount(animals) {
  */
 function getAllKinds(animals) {
   let kindOfArr = [];
-  for (i = 0; i < animals.length; i++) {
+  for (let i = 0; i < animals.length; i++) {
     kindOfArr.push(animals[i].kind);
   }
   return kindOfArr;
@@ -75,7 +75,7 @@ function getAllKinds(animals) {
  */
 function filterByCountMinimum(animals, minimum) {
   let objInArr = [];
-  for (i = 0; i < animals.length; i++) {
+  for (let i = 0; i < animals.length; i++) {
     let count1 = animals[i].count;
     if (count1 >= minimum) {
       objInArr.push(animals[i]);
@@ -98,7 +98,7 @@ function filterByCountMinimum(animals, minimum) {
  */
 function getMostCommonAnimal(animals) {
   let hightestCountObj = animals[0];
-  for (i = 1; i < animals.length; i++) {
+  for (let i = 1; i < animals.length; i++) {
     let highCount = animals[i].count;
     if (highCount > hightestCountObj.count) {
      hightestCountObj = animals[i];
